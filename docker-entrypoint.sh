@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-config=`curl "consul.service.consul:8500/v1/kv/logstash/config?raw"`
+config=`curl "http://consul.service.consul/v1/kv/logstash/config?raw"`
 
 if [ ! -z "$config" ]; then
   echo "$config"
